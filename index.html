@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Medicare+</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Medicines</a>
+      <a href="#trust">Why Us</a>
+      <a href="#cart">Cart</a>
+    </nav>
+  </header>
+  <section id="home" class="hero">
+    <h1>Welcome to Medicare+</h1>
+    <p>Your Trusted Online Medical Store</p>
+    <button onclick="scrollToSection('products')">Shop Now</button>
+  </section>
+  <section id="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-list">
+      <div class="category">Fever</div>
+      <div class="category">Cough & Cold</div>
+      <div class="category">Vitamins</div>
+      <div class="category">Baby Care</div>
+      <div class="category">Hygiene</div>
+      <div class="category">Personal Care</div>
+    </div>
+  </section>
+  <section id="products">
+    <h2>Available Medicines</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="paraimg2.jpg" alt="Paracetamol">
+        <h3>Paracetamol</h3>
+        <p>₹30</p>
+        <button onclick="addToCart('Paracetamol', 30)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="syup.jpg" alt="Cough Syrup">
+        <h3>Cough Syrup</h3>
+        <p>₹120</p>
+        <button onclick="addToCart('Cough Syrup', 120)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="vitaminimg3.jpg" alt="Vitamin C">
+        <h3>Vitamin C</h3>
+        <p>₹90</p>
+        <button onclick="addToCart('Vitamin C', 90)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="bodylotionimg4.jpg" alt="Baby Lotion">
+        <h3>Baby Lotion</h3>
+        <p>₹250</p>
+        <button onclick="addToCart('Baby Lotion', 250)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="handimg5.jpg" alt="Sanitizer">
+        <h3>Sanitizer</h3>
+        <p>₹70</p>
+        <button onclick="addToCart('Sanitizer', 70)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="padimg10.jpg" alt="Sanitary Pad">
+        <h3>Sanitary Pad</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Sanitary Pad', 150)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="conimg9.jpg" alt="Condom">
+        <h3>Condom</h3>
+        <p>₹200</p>
+        <button onclick="addToCart('Condom', 200)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  <section id="trust">
+    <div class="trust-content">
+      <div class="trust-text">
+        <h2>Trusted Medicines, Fast Delivery</h2>
+        <p>We ensure 100% genuine medicines with quick doorstep delivery.</p>
+      </div>
+      <div class="trust-image">
+        <img src="img6.jpg" alt="Fast Delivery">
+      </div>
+    </div>
+  </section>
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p id="total">Total: ₹0</p>
+    <h3>Delivery Address</h3>
+    <input type="text" id="customer-name" placeholder="Full Name">
+    <input type="text" id="customer-address" placeholder="Full Address">
+    <input type="text" id="customer-phone" placeholder="Phone Number">
+    <h3>Payment Method</h3>
+    <select id="payment-method">
+      <option value="wallet">Wallet (Balance: ₹<span id="wallet-balance">0</span>)</option>
+      <option value="card">Credit/Debit Card</option>
+      <option value="upi">UPI</option>
+      <option value="cod">Cash on Delivery</option>
+    </select>
+    <div class="wallet-box">
+      <h3>Add Money to Wallet</h3>
+      <input type="number" id="wallet-amount" placeholder="Enter amount">
+      <button onclick="addMoney()">Add Money</button>
+    </div>
+    <button onclick="checkout()">Place Order</button>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>Medico+</h2>
+        <p>Trusted Medicines, Fast Delivery</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#trust">Why Us</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Products</a></li>
+        </ul>
+      </div>    
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/?lang=en"><img src="grok.png" alt="Twitter"></a>
+            <a href="https://in.linkedin.com/"><img src="linkd.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Medico+. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
